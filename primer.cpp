@@ -8,8 +8,8 @@ bool checkPrime(unsigned long long num) {
 }
 
 bool simplePrime(unsigned long long num) {
-    std::cout << "Simple check " << num << std::endl;
-    for (unsigned long long i = 2; i < num / 2; i++) {
+//    std::cout << "Simple check " << num << std::endl;
+    for (unsigned long long i = 2; i <= num / 2; i++) {
         if (num % i == 0) {
             return false;
         }
@@ -32,7 +32,7 @@ bool primeMillerRabin(unsigned long long num, int accaracy) {
     for (int k = 0; k < accaracy; k++) {
         unsigned long long base = distrib(gen);
         if (witnessMillerRabin(num, base2Power, remainder, base) == false) {
-            std::cout << "witness " << base << std::endl;
+ //           std::cout << "witness " << base << std::endl;
             return false;
         }
     }
