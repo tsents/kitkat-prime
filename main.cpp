@@ -1,7 +1,7 @@
 #include "bumble.h"
 #include <iostream>
 
-const unsigned int PRIME_COUNT = 1000;
+const unsigned int PRIME_COUNT = 10000;
 
 int main() {
     unsigned long long *primesArray = new unsigned long long[PRIME_COUNT];
