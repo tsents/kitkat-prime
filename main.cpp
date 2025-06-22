@@ -1,10 +1,15 @@
-#include "primer.h"
+#include "bumble.h"
 #include <iostream>
 
+const unsigned int PRIME_COUNT = 1000;
+
 int main() {
-    std::cout << checkPrime(15485863) << std::endl; // very large prime
-    std::cout << checkPrime(15485861) << std::endl;
-    std::cout << checkPrime(3) << std::endl;
-    std::cout << checkPrime(8209) << std::endl;
+    unsigned long long *primesArray = new unsigned long long[PRIME_COUNT];
+    findPrimes(PRIME_COUNT, primesArray);
+
+    for (unsigned int i = 0; i < PRIME_COUNT; i++) {
+        std::cout << primesArray[i] << ", ";
+    }
+    std::cout << std::endl;
     return 0;
 }

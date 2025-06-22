@@ -1,6 +1,5 @@
 #pragma once
 
-#include <iostream>
 #include <random>
 
 const int DEFAULT_ACCARACY = 10; // 4 ^ -10 accaracy.
